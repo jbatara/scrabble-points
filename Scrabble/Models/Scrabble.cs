@@ -25,10 +25,14 @@ namespace Scrabble
                 return false;
             }
             
-            
+        
+        }
+            public static int CharValue()
+            {
             // char[] userArray = userInput.ToCharArray();
             // Console.WriteLine(userArray);
-        }
+
+            }
 
     }
  
