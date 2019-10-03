@@ -29,15 +29,23 @@ namespace Scrabble
             public static int CharValue(string userInput)
             {
                 int totalPoints = 0;
-             char[] onePointArr = new char[] { 'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't' };
+                char[] onePointArr = new char[] { 'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't' };
 
-             char[] userArray = userInput.ToLower().ToCharArray();
-            for(int i = 0; i < userArray.Length; i++)
-            {
+                char[] twoPointArr = new char[] { 'd', 'g'};
+
+                char[] userArray = userInput.ToLower().ToCharArray();
+                
+                for(int i = 0; i < userArray.Length; i++)
+                {
                 if (onePointArr.Contains(userArray[i]))
                 {
                     totalPoints++;
                 }
+                else if (twoPointArr.Contains(userArray[i]))
+                {
+                 totalPoints += 2;   
+                }
+            
             }
             
              return totalPoints;
