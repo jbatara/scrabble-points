@@ -24,16 +24,69 @@ namespace Scrabble.Testing
         }
 
          [TestMethod]
-        public void CharValue_ChecksForLetterVal_Int()
+        public void CharValue_ChecksForOnePtLetter_Int()
         {
-            string userInput = "zebra";
-            int expected =  16;
+            string userInput = "a";
+            int expected =  1;
             int actual = Game.CharValue(userInput);
             // "actual" represents what will perform the function to pass the test. in this case its the userInput, being passed into the CharValue method, which lives in the Game class.
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void CharValue_ChecksForTwoPtLetter_Int()
+        {
+            string userInput = "da";
+            int expected =  3;
+            int actual = Game.CharValue(userInput);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CharValue_ChecksForThreePtLetter_Int()
+        {
+            string userInput = "dab";
+            int expected =  6;
+            int actual = Game.CharValue(userInput);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CharValue_ChecksForFourPtLetter_Int()
+        {
+            string userInput = "dabf";
+            int expected =  10;
+            int actual = Game.CharValue(userInput);
+            Assert.AreEqual(expected, actual);
+        }
     
+     [TestMethod]
+        public void CharValue_ChecksForFivePtLetter_Int()
+        {
+            string userInput = "dabfk";
+            int expected =  15;
+            int actual = Game.CharValue(userInput);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CharValue_ChecksForEightPtLetter_Int()
+        {
+            string userInput = "dabfkj";
+            int expected =  23;
+            int actual = Game.CharValue(userInput);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CharValue_ChecksForTenPtLetter_Int()
+        {
+            string userInput = "dabfkjq";
+            int expected =  33;
+            int actual = Game.CharValue(userInput);
+            Assert.AreEqual(expected, actual);
+        }
     }
 
 
