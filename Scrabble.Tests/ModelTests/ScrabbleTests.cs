@@ -26,7 +26,9 @@ namespace Scrabble.Testing
         public void CharValue_ChecksForLetterVal_Int()
        
         {
-          char userInput = "a";
+            string userInput = "super";
+            int expected =  4;
+            int actual = Game.CharValue(userInput);
 
 
             Assert.AreEqual(expected, actual);

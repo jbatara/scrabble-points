@@ -8,5 +8,6 @@ public class Program
         Console.WriteLine("Some text prompting the User.");
         // string UserInput = Console.ReadLine();
         Game.CheckIfLetter("array");
+        Game.CharValue("array");
     }
 }

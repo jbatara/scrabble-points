@@ -1,15 +1,14 @@
 // BACKEND CODE GOES IN HERE
 using System;
 using System.Text.RegularExpressions;
+using System.Linq;
+
 
 
 namespace Scrabble
 {
     public class Game
     {
-        // public string Letter {get; set;}
-        // public int LetterPoint {get; set;}
-
         public static bool CheckIfLetter(string userInput)
         {
             Regex reg = new Regex(@"[a-zA-Z]{2,}");
@@ -27,10 +26,21 @@ namespace Scrabble
             
         
         }
-            public static int CharValue()
+            public static int CharValue(string userInput)
             {
-            // char[] userArray = userInput.ToCharArray();
-            // Console.WriteLine(userArray);
+                int totalPoints = 0;
+             char[] onePointArr = new char[] { 'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't' };
+
+             char[] userArray = userInput.ToLower().ToCharArray();
+            for(int i = 0; i < userArray.Length; i++)
+            {
+                if (onePointArr.Contains(userArray[i]))
+                {
+                    totalPoints++;
+                }
+            }
+            
+             return totalPoints;
 
             }
 
