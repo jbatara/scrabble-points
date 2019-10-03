@@ -32,6 +32,16 @@ namespace Scrabble
                 char[] onePointArr = new char[] { 'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't' };
 
                 char[] twoPointArr = new char[] { 'd', 'g'};
+                
+                char[] threePointArr = new char[] { 'b', 'c', 'm', 'p' };
+                 
+                char[] fourPointArr = new char[] { 'f', 'h', 'v', 'w', 'y' };
+                
+                char[] fivePointArr = new char[] { 'k' };
+                
+                char[] eightPointArr = new char[] { 'j', 'x' };
+
+                char[] tenPointArr = new char[] { 'q', 'z' };
 
                 char[] userArray = userInput.ToLower().ToCharArray();
                 
@@ -44,6 +54,26 @@ namespace Scrabble
                 else if (twoPointArr.Contains(userArray[i]))
                 {
                  totalPoints += 2;   
+                }
+                else if (threePointArr.Contains(userArray[i]))
+                {
+                 totalPoints += 3;   
+                }
+                else if (fourPointArr.Contains(userArray[i]))
+                {
+                 totalPoints += 4;   
+                }
+                else if (fivePointArr.Contains(userArray[i]))
+                {
+                 totalPoints += 5;   
+                }
+                else if (eightPointArr.Contains(userArray[i]))
+                {
+                 totalPoints += 8;   
+                }
+                else if (tenPointArr.Contains(userArray[i]))
+                {
+                 totalPoints += 10;   
                 }
             
             }
