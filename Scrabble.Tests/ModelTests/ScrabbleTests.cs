@@ -15,7 +15,7 @@ namespace Scrabble.Testing
     
 
         {
-            string userInput = "a";
+            string userInput = "as";
             bool expected = true;
             bool actual = Game.CheckIfLetter(userInput);
             // ^^ need "Game." because its the name of the class that holds this method, and its a static method. 
